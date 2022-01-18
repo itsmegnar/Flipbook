@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Flip Book</title>
+
+    <!-- Css file link up -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style >
+    *{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #AAF0C1;
+}
+.back {
+    width: 250px;
+    height: 350px;
+    background-color: #33cc99;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    box-shadow: 0 10px 8px 2px #666;
+}
+.front{
+    width: 210px;
+    height: 100%;
+    position: absolute;
+    left: 40px;
+    background-color:  #33cc99;
+    transform: all .5s ease-in, rotateY(-20deg);
+    -webkit-transform: all .5s ease-in, rotateY(-20deg);
+    -moz-transform: all .5s ease-in, rotateY(-20deg);
+    -ms-transform: all .5s ease-in, rotateY(-20deg);
+    -o-transform: all .5s ease-in, rotateY(-20deg);
+    transition: all linear .5s;
+    -webkit-transition: all linear .5s;
+    -moz-transition: all linear .5s;
+    -ms-transition: all linear .5s;
+    -o-transition: all linear .5s;
+    transform-style: preserve-3d;
+    transform-origin: left;
+} 
+.back:hover .front{
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    box-shadow: 0 10px 8px 2px #666;
+}
+.flip_img{
+   position: relative; 
+}
+.flip_img::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.2);
+    width: 100%;
+    height: 350px;
+    z-index: 1;
+}
+.flip_img img{
+    width: 100%;
+    max-width: 100%;
+    height: 350px;
+}
+.flip_text{
+    position: absolute;
+    padding: 70px;
+}
+.flip_text h2{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 5px;
+}
+.flip_text p{
+    color: white;
+    font-size:15px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 5px;
+}
+.flip_text  a{
+    margin-top: 20px;
+    margin-left: 0px;
+    display: inline-block;
+    color: aliceblue;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 2px 8px;
+    border: 1px solid #02fbfb;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    text-decoration: none;
+}
+.flip_text  a:hover{
+    background-color: #000;
+    border: 1px solid #6b0fc2;
+    cursor: pointer;
+}
+
+</style>
+<body>
+    <div class="back">
+        <div class="flip_text">
+            <h2>Happy Birthday Partner <3</h2>
+        
+                <a href="https://drive.google.com/file/d/1QLwTRFpUjm2hC4aM7EUv0YZmXxBjcGfh/view?usp=sharing" target="_blank">Click Me!!</a>
+           
+        </div>
+        <div class="front">
+            <div class="flip_img">
+                <img src="2.jpg" alt="1">
+            </div>
+        </div>
+    </div>
+</body>
+ 
+</html>
